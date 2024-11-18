@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .player {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .album-art img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .controls button {
+        width: 40px;
+        height: 40px;
+    }
+
+    header .search-bar input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .playlist ul li {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
