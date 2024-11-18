@@ -1,6 +1,6 @@
 
 // Your Spotify Access Token
-const accessToken = "BQCXs2vuKJUtAKvFK1NG7bdlWabKUZECCJZ0PeyUKEACBMScpoUoKNRLKl_0g6bEPF8a1dPir73XRlW0SEQH6EPPV7nvv338oQQn_BcusuCeNjH0d3k";
+const accessToken = "BQABWR4yAf4th53S5613n_MTThCJYqh0quXp99148AgPLJnIyOXQBZhwuJqwGBNw7nUi6fhdkyjhxYK7J4QfmcUiVze9UYV0Jddwvt5ktSJNa1Tf2Lk";
 
 // Fetch Playlist Tracks
 async function fetchPlaylistTracks(playlistId) {
