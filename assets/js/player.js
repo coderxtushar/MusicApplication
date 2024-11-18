@@ -5,6 +5,9 @@ const volumeControl = document.getElementById("volume-control");
 const seekBar = document.getElementById("seek-bar");
 const currentTimeEl = document.getElementById("current-time");
 const durationEl = document.getElementById("duration");
+const audioElement = document.getElementById('audio'); 
+const currentTimeLabel = document.getElementById('current-time');
+const durationLabel = document.getElementById('duration');
 
 // Load Playlist
 async function loadPlaylist() {
@@ -82,6 +85,27 @@ function formatTime(seconds) {
     const secs = Math.floor(seconds % 60);
     return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
 }
+
+audioElement.addEventListener('loadedmetadata', () => {
+    durationLabel.textContent = formatTime(audioElement.duration);
+    seekBar.max = Math.floor(audioElement.duration); 
+});
+
+// Update seek bar and timer as the song plays
+audioElement.addEventListener('timeupdate', () => {
+    currentTimeLabel.textContent = formatTime(audioElement.currentTime);
+    seekBar.value = Math.floor(audioElement.currentTime);
+});
+
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+    return `${mins}:${secs}`;
+}
+
+seekBar.addEventListener('input', () => {
+    audioElement.currentTime = seekBar.value;
+});
 
 // Event Listeners
 document.getElementById("play-pause-btn").addEventListener("click", togglePlayPause);

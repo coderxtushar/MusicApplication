@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
     <div class="container">
@@ -26,6 +27,7 @@
                 <span id="duration">0:00</span>
             </div>
         </div>
+        <audio id="audio" preload="metadata"></audio>
 
         <!-- Playlist Section -->
         <div class="playlist" id="playlist">
@@ -34,6 +36,7 @@
         </div>
     </div>
     <script src="assets/js/api.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/player.js"></script>
 </body>
 </html>

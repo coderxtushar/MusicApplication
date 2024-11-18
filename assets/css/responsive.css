@@ -23,4 +23,53 @@
         font-size: 14px;
         padding: 8px;
     }
+
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .player, .playlist {
+        width: 100%;
+    }
+
+    .track-cover {
+        width: 180px;
+        height: 180px;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .progress-bar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .playlist ul li {
+        font-size: 12px;
+    }
+
+
+
+body {
+    font-size: 14px;
+}
+
+h3, #track-title, #track-artist {
+    font-size: 16px;
+}
+
+.playlist {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
 }
